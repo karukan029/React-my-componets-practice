@@ -1,4 +1,4 @@
-import React,{ FC , useState, Component } from 'react';
+import React, { FC, useState } from 'react';
 import { render } from 'react-dom';
 
 /** components */
@@ -8,8 +8,6 @@ import TestEmotion from './components/TestEmotion';
 
 /** css */
 import './style.css';
-
-
 
 // interface AppProps { }
 /**
@@ -22,19 +20,17 @@ type AppState = {
 }
 */
 
-const App:FC = () => {
+const App: FC = () => {
   const [name, setName] = useState('React');
 
   return (
     <div>
-    <Hello name={name} />
-    <Stack />
-    <TestEmotion />
-    <p>
-      Start editing to see some magic happen :)
-    </p>
-  </div>
-  )
-}
+      <Hello name={name} />
+      <Stack />
+      <TestEmotion />
+      <p>Start editing to see some magic happen :)</p>
+    </div>
+  );
+};
 
 render(<App />, document.getElementById('root'));
