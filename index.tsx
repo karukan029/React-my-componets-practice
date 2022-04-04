@@ -9,7 +9,9 @@ import Hello from './Hello';
 import Stack from './components/Stack';
 import TestEmotion from './components/TestEmotion';
 
-// モジューラースケールをglobalに定義する
+/**
+ * モジュラースケールをユーティリティクラスとして定義
+ */
 
 /** css */
 import './style.css';
@@ -39,10 +41,26 @@ const App: FC = () => {
         * {
           font-family: sans-self;
         }
+        :root {
+          --ratio: 1.5;
+          --s-5: calc(var(--s-4) / var(--ratio));
+          --s-4: calc(var(--s-3) / var(--ratio));
+          --s-3: calc(var(--s-2) / var(--ratio));
+          --s-2: calc(var(--s-1) / var(--ratio));
+          --s-1: calc(var(--s-0) / var(--ratio));
+          --s0: 1rem;
+          --s1: calc(var(--s0) * var(--ratio));
+          --s2: calc(var(--s1) * var(--ratio));
+          --s3: calc(var(--s2) * var(--ratio));
+          --s4: calc(var(--s3) * var(--ratio));
+          --s5: calc(var(--s4) * var(--ratio));
+        }
       `}
       />
       <Hello name={name} />
-      <p>item</p>
+      <p css={css`
+        font-size: var(--s1)
+      `}>item</p>
       <Stack>
         <p css={item}>test1</p>
         <p css={item}>test2</p>
