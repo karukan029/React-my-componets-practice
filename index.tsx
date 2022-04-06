@@ -33,13 +33,23 @@ const item = css`
 
 const App: FC = () => {
   const [name, setName] = useState('React');
-
+// 次 Globalにhslを使用したテーマカラーを実装する
   return (
     <div>
       <Global
         styles={css`
         * {
           font-family: sans-self;
+          box-sizing: border-box;
+          /* theme */
+          /* hsl(色相, 彩度, 輝度) */
+          --color-light: hsl(0, 0%, 95%);
+          --color-dark: hsl(0, 0%, 20%);
+          color: var(--color-dark);
+          background-color: var(--color-light);
+          /* invertで色彩を反転させる(簡易ダークテーマの実装) */
+          /* CSS in JS のTheme上でをどう扱うか？ */
+          /* filter: invert(100%); */
         }
         :root {
           --ratio: 1.5;
