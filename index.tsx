@@ -33,7 +33,18 @@ const item = css`
 
 const App: FC = () => {
   const [name, setName] = useState('React');
-// 次 Globalにhslを使用したテーマカラーを実装する
+  const themeTypes = {
+    light: 'invert(0%)',
+    dark: 'invert(100%)',
+  } as const;
+
+  const [themeType, setThemeType] = useState<string>(themeTypes.light);
+
+  const changeThemeType = () =>
+    themeType === themeTypes.light
+      ? setThemeType(themeTypes.dark)
+      : setThemeType(themeTypes.light);
+  // 次 Globalにhslを使用したテーマカラーを実装する
   return (
     <div>
       <Global
@@ -49,7 +60,8 @@ const App: FC = () => {
           background-color: var(--color-light);
           /* invertで色彩を反転させる(簡易ダークテーマの実装) */
           /* CSS in JS のTheme上でをどう扱うか？ */
-          /* filter: invert(100%); */
+          /* Provider上にテーマのパラメータを持たせて切り替えすればいい */
+          filter: ${themeType};
         }
         :root {
           --ratio: 1.5;
@@ -68,9 +80,16 @@ const App: FC = () => {
       `}
       />
       <Hello name={name} />
-      <p css={css`
+
+      <button onClick={changeThemeType}>Change Theme</button>
+
+      <p
+        css={css`
         font-size: var(--s1)
-      `}>item</p>
+      `}
+      >
+        item
+      </p>
       <Stack>
         <p css={item}>test1</p>
         <p css={item}>test2</p>
