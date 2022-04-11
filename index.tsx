@@ -7,6 +7,7 @@ import { render } from 'react-dom';
 /** components */
 import Hello from './Hello';
 import Stack from './components/Stack';
+import Box from './components/Box';
 import TestEmotion from './components/TestEmotion';
 
 /**
@@ -82,6 +83,8 @@ const App: FC = () => {
       <Hello name={name} />
 
       <button onClick={changeThemeType}>Change Theme</button>
+      
+      <Box>In the box</Box>
 
       <p
         css={css`
