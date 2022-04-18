@@ -21,7 +21,7 @@ const Box: FC<Props> = (props) => {
 // &で指定しているクラスを指定
 const boxStyle = (props: Props) => css`
   padding: ${props.padding ? props.padding : 'var(--s1)'};
-  border: ${props.borderWidth ? props.borderWidth : 'var(--s1)solid'};
+  border: ${props.borderWidth ? props.borderWidth : '1px solid'};
 
   & * {
     color: inherit;
