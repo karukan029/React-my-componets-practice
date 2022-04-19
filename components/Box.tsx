@@ -11,6 +11,7 @@ import React, { FC } from 'react';
 type Props = {
   padding?: string;
   borderWidth?: string;
+  backgroundColor?:  string;
   // invert: boolean;
 };
 
@@ -22,6 +23,7 @@ const Box: FC<Props> = (props) => {
 const boxStyle = (props: Props) => css`
   padding: ${props.padding ? props.padding : 'var(--s1)'};
   border: ${props.borderWidth ? props.borderWidth : '1px solid'};
+  background-color: ${props.backgroundColor ? props.backgroundColor : 'inherit'};
 
   & * {
     color: inherit;

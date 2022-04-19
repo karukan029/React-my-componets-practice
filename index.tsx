@@ -8,6 +8,9 @@ import { render } from 'react-dom';
 import Hello from './Hello';
 import Stack from './components/Stack';
 import Box from './components/Box';
+import HeaderBox from './components/HeaderBox';
+
+/** extarnal */
 import TestEmotion from './components/TestEmotion';
 
 /**
@@ -85,6 +88,9 @@ const App: FC = () => {
       <button onClick={changeThemeType}>Change Theme</button>
       
       <Box>In the box</Box>
+      <HeaderBox 
+      headerText="header"
+      headerBackgroundColor="red">Contents</HeaderBox>
 
       <p
         css={css`
