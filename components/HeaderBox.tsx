@@ -12,10 +12,9 @@ type Props = {
   children: ReactChild;
 }
 
-// padingとborderWidhtを渡しているが、値が認識されていない
 const HeaderBox:FC<Props> = (props) => (
   <Box padding="0" borderWidth="0">
-    <Box padding={props.padding} borderWidth ={props.borderWidth} backgroundColor={props.headerBackgroundColor}>{props.headerText}</Box>
+    <Box padding={"var(--s0) var(--s1)"} borderWidth ={props.borderWidth} backgroundColor={props.headerBackgroundColor}>{props.headerText}</Box>
     <Box padding={props.padding} borderWidth={props.borderWidth} backgroundColor={props.backgroundColor}>{props.children}</Box>
   </Box>
 )
