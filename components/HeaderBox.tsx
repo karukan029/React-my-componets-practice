@@ -1,4 +1,4 @@
-import React, {FC, ReactChild} from 'react';
+import React, {FC, ReactNode} from 'react';
 
 /** components */
 import Box from './Box';
@@ -9,7 +9,7 @@ type Props = {
   padding?: string;
   borderWidth?: string;
   backgroundColor?: string;
-  children: ReactChild;
+  children: ReactNode;
 }
 
 const HeaderBox:FC<Props> = (props) => (

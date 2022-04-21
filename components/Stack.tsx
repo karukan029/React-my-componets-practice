@@ -2,7 +2,11 @@
 /**@jsx jsx */
 import { css, jsx } from '@emotion/react';
 
-import React, { FC } from 'react';
+import React, { FC, ReactNode } from 'react';
+
+type Props = {
+  children: ReactNode;
+};
 
 const Stack: FC = (props) => {
   return <div css={stackStyle}>{props.children}</div>;

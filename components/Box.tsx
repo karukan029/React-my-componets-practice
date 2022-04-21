@@ -1,7 +1,7 @@
 /**@jsx jsx */
 import { css, jsx } from '@emotion/react';
 
-import React, { FC } from 'react';
+import React, { FC, ReactNode } from 'react';
 
 /**
  * 次のタスク
@@ -13,6 +13,7 @@ type Props = {
   borderWidth?: string;
   borderColor?: string;
   backgroundColor?:  string;
+  children?: ReactNode;
   // invert: boolean;
 };
 

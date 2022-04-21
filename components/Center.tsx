@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, ReactNode } from 'react';
 
 /**
  * 外在的な中央揃え
@@ -7,8 +7,16 @@ import React, { FC } from 'react';
  * 内部のコンテンツの中央揃え
  */
 
-type Props = {};
+type Props = {
+  children: ReactNode;
+};
 
-const Center: FC = () => {};
+const Center: FC = () => {
+  return <div></div>
+};
+
+const centerStyle = (props:) {
+
+}
 
 export default Center;
