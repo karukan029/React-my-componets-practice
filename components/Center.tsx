@@ -1,4 +1,6 @@
 import React, { FC, ReactNode } from 'react';
+import { css } from '@emotion/react';
+
 
 /**
  * 外在的な中央揃え
@@ -8,15 +10,20 @@ import React, { FC, ReactNode } from 'react';
  */
 
 type Props = {
-  children: ReactNode;
+  max?: string;
+  andText: boolean;
+  children?: ReactNode;
 };
 
-const Center: FC = () => {
-  return <div></div>
+const Center: FC<Props> = (props) => {
+  return <div css={centerStyle}>{props.children}</div>
 };
 
-const centerStyle = (props:) {
+const centerStyle = (props:Props) => css`
+  /*　ビューポートの幅との間に余白をつけるために適用 */
+  /* paddingを幅の計算から除外 */
+  box-sizing: content-box;
 
-}
+`
 
 export default Center;
