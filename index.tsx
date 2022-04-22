@@ -9,6 +9,7 @@ import Hello from './Hello';
 import Stack from './components/Stack';
 import Box from './components/Box';
 import HeaderBox from './components/HeaderBox';
+import Center from './components/Center';
 
 /** extarnal */
 import TestEmotion from './components/TestEmotion';
@@ -86,7 +87,6 @@ const App: FC = () => {
       <Hello name={name} />
 
       <button onClick={changeThemeType}>Change Theme</button>
-      
       <Box>In the box</Box>
       <HeaderBox 
       headerText="header"
