@@ -100,7 +100,9 @@ const App: FC = () => {
         item
       </p>
       <Stack>
-        <p css={item}>test1</p>
+        <Center >
+          <p css={item}>test1</p>
+        </Center>
         <p css={item}>test2</p>
         <p css={item}>test3</p>
       </Stack>

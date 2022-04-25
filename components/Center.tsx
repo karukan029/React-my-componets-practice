@@ -12,16 +12,20 @@ type Props = {
   // コンテンツの最大幅
   maxWidth?: string;
   // テキストを中央揃えにするか
-  isTextCenter: boolean;
+  isTextCenter?: boolean;
   // コンテンツの両端の余白
   isGutters: boolean;
   // 子要素をコンテンツ幅に基づいて中央揃えにさせるか
-  isIntrinsic: boolean;
+  isIntrinsic?: boolean;
   children: ReactNode;
 };
 
 // デフォルト引数を設定し、呼び出す側の負担を減らす
 const Center: FC<Props> = (props) => {
+  // 1. propsを分解し、それぞれのプロパティにデフォルト引数を設定
+  // ↑ centerStyleにpropsを渡す際に、データの整形が必要になるので面倒
+  // 2. propsを元に新たなオブジェクトを作成し、デフォルト値を設定
+  // その他代案求む
   return <div css={centerStyle(props)}>{props.children}</div>
 };
 
