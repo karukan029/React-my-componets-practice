@@ -88,9 +88,9 @@ const App: FC = () => {
 
       <button onClick={changeThemeType}>Change Theme</button>
       <Box>In the box</Box>
-      <HeaderBox 
-      headerText="header"
-      headerBackgroundColor="red">Contents</HeaderBox>
+      <HeaderBox headerText="header" headerBackgroundColor="red">
+        Contents
+      </HeaderBox>
 
       <p
         css={css`
@@ -100,7 +100,7 @@ const App: FC = () => {
         item
       </p>
       <Stack>
-        <Center >
+        <Center>
           <p css={item}>test1</p>
         </Center>
         <p css={item}>test2</p>
