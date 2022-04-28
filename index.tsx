@@ -16,6 +16,7 @@ import TestEmotion from './components/TestEmotion';
 
 /**
  * モジュラースケールをユーティリティクラスとして定義
+ * 課題：WAI-AREAのrole属性を柔軟に定義できるようなコンポーネント定義
  */
 
 /** css */
@@ -100,7 +101,7 @@ const App: FC = () => {
         item
       </p>
       
-      <Center>
+      <Center isTextCenter={true}>
         <p>In the Center</p>
       </Center>
       <Stack>

@@ -34,9 +34,9 @@ const Center: FC<Props> = (props) => {
   // Centerのスタイルが適用されないので調査(emotionのjsx)
   const {
     maxWidth = '60ch',
-    isTextCenter = true,
+    isTextCenter = false,
     isGutters = true,
-    isIntrinsic = true,
+    isIntrinsic = false,
   } = props;
 
   const centerStyleProps = {
