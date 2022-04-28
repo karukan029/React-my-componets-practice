@@ -1,5 +1,7 @@
+/**@jsx jsx */
+import { css, jsx } from '@emotion/react';
+
 import React, { FC, ReactNode } from 'react';
-import { css } from '@emotion/react';
 
 /**
  * 外在的な中央揃え
@@ -29,7 +31,7 @@ const Center: FC<Props> = (props) => {
   // 2. propsを元に新たなオブジェクトを作成し、デフォルト値を設定
   // その他代案求む
   // 2.がいいかも
-  // Centerのスタイルが適用されないので調査
+  // Centerのスタイルが適用されないので調査(emotionのjsx)
   const {
     maxWidth = '60ch',
     isTextCenter = true,
