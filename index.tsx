@@ -10,6 +10,7 @@ import Stack from './components/Stack';
 import Box from './components/Box';
 import HeaderBox from './components/HeaderBox';
 import Center from './components/Center';
+import Cluster from './components/Cluster';
 
 /** extarnal */
 import TestEmotion from './components/TestEmotion';
@@ -100,7 +101,7 @@ const App: FC = () => {
       >
         item
       </p>
-      
+
       <Center isTextCenter={true}>
         <p>In the Center</p>
       </Center>
@@ -109,6 +110,11 @@ const App: FC = () => {
         <p css={item}>test2</p>
         <p css={item}>test3</p>
       </Stack>
+      <Cluster>
+        <p css={item}>test1</p>
+        <p css={item}>test2</p>
+        <p css={item}>test3</p>
+      </Cluster>
       <TestEmotion />
       <p>Start editing to see some magic happen :)</p>
     </div>
