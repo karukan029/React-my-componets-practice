@@ -8,12 +8,12 @@ import { render } from 'react-dom';
 import Hello from './Hello';
 import Stack from './components/Stack';
 import Box from './components/Box';
-import HeaderBox from './components/HeaderBox';
+import HeaderBox from './example/HeaderBox';
 import Center from './components/Center';
 import Cluster from './components/Cluster';
 
 /** extarnal */
-import TestEmotion from './components/TestEmotion';
+import TestEmotion from './example/TestEmotion';
 
 /**
  * モジュラースケールをユーティリティクラスとして定義
